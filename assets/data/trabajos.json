@@ -1,0 +1,127 @@
+[
+  {
+    "id": "microteatro",
+    "title": "Microteatro: Sala de Espera / La Última Esperanza",
+    "status": "Finalizado",
+    "statusClass": "inactive",
+    "imgSrc": "images/Web_TRABAJOS/4.png",
+    "imgAlt": "Microteatro",
+    "desc": "Participación en las obras de microteatro \"Sala de Espera\" y \"La Última Esperanza\" (Mayo/Junio 2026) en Microteatro por dinero. Forman parte de un ciclo de obras centrado en la ciudad de Madrid y la temática del cambio climático.",
+    "hasModal": false
+  },
+  {
+    "id": "de-dado-a-dado",
+    "title": "De dado a dado",
+    "status": "En Activo",
+    "statusClass": "active",
+    "imgSrc": "images/Web_TRABAJOS/1.png",
+    "imgAlt": "De dado a dado",
+    "desc": "Ciclo Vallefantásticas (Mayo 2026, Centro Cultural El Pozo del tío Raimundo). Espectáculo de improvisación infantil donde los niños y niñas del público se convierten en autores de un cuento que cobra vida con la ayuda de los improvisadores y un \"Dado Mágico\".",
+    "hasModal": false
+  },
+  {
+    "id": "tusito",
+    "title": "¿Cómo te sientes, Tusito?",
+    "status": "En Activo",
+    "statusClass": "active",
+    "imgSrc": "images/Web_TRABAJOS/5.png",
+    "imgAlt": "Teatro Infantil",
+    "desc": "Obra de teatro musical dirigida a bebés y primera infancia, representada en las Escuelas Infantiles Ardillas Traviesas. Una propuesta escénica tierna e interactiva diseñada para conectar con los más pequeños a través de la música y la emoción.",
+    "hasModal": false
+  },
+  {
+    "id": "hola-mi-nombre-es",
+    "title": "Hola, mi nombre es...",
+    "status": "En Activo",
+    "statusClass": "active",
+    "imgSrc": "images/Web_TRABAJOS/9.png",
+    "imgAlt": "Hola, mi nombre es!",
+    "desc": "Espectáculo de improvisación principal de la compañía Silla de Más. Un formato fresco y dinámico donde las anécdotas y experiencias del propio público se convierten en la chispa de inspiración para crear historias únicas, efímeras y llenas de humor.",
+    "hasModal": false
+  },
+  {
+    "id": "silla-de-mas",
+    "title": "Silla de Más",
+    "status": "En Activo",
+    "statusClass": "active",
+    "imgSrc": "images/Web_TRABAJOS/6.png",
+    "imgAlt": "Silla de Más",
+    "desc": "Cofundador de la compañía. Desde 2022 creamos y representamos obras de improvisación teatral. En activo con \"Hola, mi nombre es...\".",
+    "hasModal": true,
+    "modalImages": [
+      "images/Web_TRABAJOS/8.png",
+      "images/Web_TRABAJOS/9.png"
+    ],
+    "modalText": "Compañía de improvisación teatral fundada en 2022. Creamos y representamos espectáculos de improvisación en diferentes escenarios de Madrid. Actualmente en activo con nuestra función \"Hola, mi nombre es...\", un show de improvisación donde el público es el protagonista."
+  },
+  {
+    "id": "escuela-eines",
+    "title": "Escuela de Jorge Eines",
+    "status": "En Activo",
+    "statusClass": "active",
+    "imgSrc": "images/Web_TRABAJOS/11.png",
+    "imgAlt": "Escuela de Jorge Eines",
+    "desc": "Desde 2025, formación actoral con Jorge Eines, catedrático en Interpretación y maestro de actores de referencia internacional.",
+    "hasModal": true,
+    "modalImages": [
+      "images/Web_TRABAJOS/12.png",
+      "images/Web_TRABAJOS/13.png"
+    ],
+    "modalText": "Desde 2025 continúo mi formación actoral en la Escuela de Interpretación de Jorge Eines, referente internacional en técnica interpretativa y director de teatro. Complemento esta formación con clases de interpretación ante cámara con Jesús Granda."
+  },
+  {
+    "id": "club-de-la-impro",
+    "title": "El Club de la Impro",
+    "status": "En Activo",
+    "statusClass": "active",
+    "imgSrc": "images/Web_TRABAJOS/10.png",
+    "imgAlt": "El Club de la Impro",
+    "desc": "Desde 2020 formo parte de la compañía profesional de El Club de la Impro, escuela dirigida por Ana Bragado y Javier Pastor. Una de las referencias de la improvisación en Madrid, con espectáculos regulares y talleres de formación.",
+    "hasModal": false
+  },
+  {
+    "id": "colaboraciones",
+    "title": "Colaboraciones",
+    "status": "En Activo",
+    "statusClass": "active",
+    "imgSrc": "images/Web_TRABAJOS/14.png",
+    "imgAlt": "Colaboraciones",
+    "desc": "Desde 2023 participo en shows de improvisación con diferentes compañías de la escena española y madrileña.",
+    "hasModal": true,
+    "modalImages": [
+      "images/Web_TRABAJOS/15.png",
+      "images/Web_TRABAJOS/16.png"
+    ],
+    "modalText": "Colaboro regularmente con diversas compañías de la escena española, participando en funciones, festivales y eventos de improvisación teatral por toda la geografía española."
+  },
+  {
+    "id": "tienda-horrores",
+    "title": "La Pequeña Tienda de los Horrores",
+    "status": "Finalizado",
+    "statusClass": "inactive",
+    "imgSrc": "images/Web_TRABAJOS/17.png",
+    "imgAlt": "La Pequeña Tienda de los Horrores",
+    "desc": "En 2024 participé en la producción del musical \"La pequeña tienda de los horrores\", interpretando el papel protagonista: Seymour Krelborn. Una experiencia que me permitió combinar técnicas vocales y de interpretación escénica en el ámbito del teatro musical.",
+    "hasModal": false
+  },
+  {
+    "id": "macbeth",
+    "title": "Macbeth",
+    "status": "Finalizado",
+    "statusClass": "inactive",
+    "imgSrc": "images/Web_TRABAJOS/18.png",
+    "imgAlt": "Macbeth",
+    "desc": "En 2024 realicé una adaptación de la tragedia de Shakespeare, interpretando el papel protagonista del rey Macbeth. Un reto actoral que me permitió explorar la psicología del personaje y la tragedia clásica desde una perspectiva contemporánea.",
+    "hasModal": false
+  },
+  {
+    "id": "la-nueva-improcanyi",
+    "title": "La Nueva Improcañí",
+    "status": "Finalizado",
+    "statusClass": "inactive",
+    "imgSrc": "images/Web_TRABAJOS/19.png",
+    "imgAlt": "La Nueva Improcañí",
+    "desc": "Durante 2024 formé parte de la compañía \"La nueva improcañí\", con representaciones semanales todos los martes en la Casa de los Jacintos de Madrid. Un ciclo de actuaciones que nos permitió experimentar y crecer como compañía.",
+    "hasModal": false
+  }
+]

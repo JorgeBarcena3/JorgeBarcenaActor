@@ -1,13 +1,15 @@
 {
   "name": "jorgebarcenaactor",
-  "version": "1.0.0",
-  "description": "Massively by HTML5 UP\r html5up.net | @ajlkn\r Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Portfolio de actor — Jorge Bárcena",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=production node server.js",
+    "dev": "node server.js",
+    "test": "echo \"No tests configured\" && exit 0"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["actor", "teatro", "improvisacion", "portfolio"],
+  "author": "Jorge Bárcena",
   "license": "ISC",
   "dependencies": {
     "express": "^5.2.1"
