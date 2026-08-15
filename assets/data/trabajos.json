@@ -16,7 +16,7 @@
     "statusClass": "active",
     "imgSrc": "images/Web_TRABAJOS/1.png",
     "imgAlt": "De dado a dado",
-    "desc": "Ciclo Vallefantásticas (Mayo 2026, Centro Cultural El Pozo del tío Raimundo). Espectáculo de improvisación infantil donde los niños y niñas del público se convierten en autores de un cuento que cobra vida con la ayuda de los improvisadores y un \"Dado Mágico\".",
+    "desc": "Espectáculo de improvisación infantil donde los niños y niñas del público se convierten en autores de un cuento que cobra vida con la ayuda de los improvisadores y un \"Dado Mágico\".",
     "hasModal": false
   },
   {
@@ -26,7 +26,7 @@
     "statusClass": "active",
     "imgSrc": "images/Web_TRABAJOS/5.png",
     "imgAlt": "Teatro Infantil",
-    "desc": "Obra de teatro musical dirigida a bebés y primera infancia, representada en las Escuelas Infantiles Ardillas Traviesas. Una propuesta escénica tierna e interactiva diseñada para conectar con los más pequeños a través de la música y la emoción.",
+    "desc": "Obra de teatro musical dirigida a bebés y primera infancia, representada en las Escuelas Infantiles. Una propuesta escénica tierna e interactiva diseñada para conectar con los más pequeños a través de la música y el teatro.",
     "hasModal": false
   },
   {
@@ -36,7 +36,7 @@
     "statusClass": "active",
     "imgSrc": "images/Web_TRABAJOS/9.png",
     "imgAlt": "Hola, mi nombre es!",
-    "desc": "Espectáculo de improvisación principal de la compañía Silla de Más. Un formato fresco y dinámico donde las anécdotas y experiencias del propio público se convierten en la chispa de inspiración para crear historias únicas, efímeras y llenas de humor.",
+    "desc": "¡Hola, mi nombre es! es un espectáculo de improvisación teatral donde cada función es única y creada en el momento. A partir de nombres, fobias y adicciones propuestas por el público, los actores construyen historias sorprendentes, divertidas y emocionantes. Un excéntrico doctor guiará esta peculiar terapia llena de humor e imaginación.",
     "hasModal": false
   },
   {
@@ -46,8 +46,8 @@
     "statusClass": "active",
     "imgSrc": "images/Web_TRABAJOS/6.png",
     "imgAlt": "Silla de Más",
-    "desc": "Cofundador de la compañía. Desde 2022 creamos y representamos obras de improvisación teatral. En activo con \"Hola, mi nombre es...\".",
-    "hasModal": true,
+    "desc": "Cofundador de la compañía. Desde 2022 creamos y representamos obras de improvisación teatral.",
+    "hasModal": false,
     "modalImages": [
       "images/Web_TRABAJOS/8.png",
       "images/Web_TRABAJOS/9.png"
@@ -62,7 +62,7 @@
     "imgSrc": "images/Web_TRABAJOS/11.png",
     "imgAlt": "Escuela de Jorge Eines",
     "desc": "Desde 2025, formación actoral con Jorge Eines, catedrático en Interpretación y maestro de actores de referencia internacional.",
-    "hasModal": true,
+    "hasModal": false,
     "modalImages": [
       "images/Web_TRABAJOS/12.png",
       "images/Web_TRABAJOS/13.png"
@@ -76,7 +76,7 @@
     "statusClass": "active",
     "imgSrc": "images/Web_TRABAJOS/10.png",
     "imgAlt": "El Club de la Impro",
-    "desc": "Desde 2020 formo parte de la compañía profesional de El Club de la Impro, escuela dirigida por Ana Bragado y Javier Pastor. Una de las referencias de la improvisación en Madrid, con espectáculos regulares y talleres de formación.",
+    "desc": "Desde 2020 formo parte de la compañía profesional de El Club de la Impro, escuela dirigida por Javier Pastor, Ana Bragado y Dani Picó. Una de las referencias de la improvisación en Madrid, con espectáculos regulares y talleres de formación.",
     "hasModal": false
   },
   {
@@ -87,7 +87,7 @@
     "imgSrc": "images/Web_TRABAJOS/14.png",
     "imgAlt": "Colaboraciones",
     "desc": "Desde 2023 participo en shows de improvisación con diferentes compañías de la escena española y madrileña.",
-    "hasModal": true,
+    "hasModal": false,
     "modalImages": [
       "images/Web_TRABAJOS/15.png",
       "images/Web_TRABAJOS/16.png"

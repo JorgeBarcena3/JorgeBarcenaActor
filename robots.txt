@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Bloquea el acceso a carpetas administrativas o privadas si usas WordPress
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
+# Indica a Google dónde está tu mapa del sitio
+Sitemap: https://jorgebarcena.es/sitemap.xml

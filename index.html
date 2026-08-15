@@ -17,7 +17,6 @@
       property="og:description"
       content="Actor e improvisador teatral madrileño. Cofundador de Silla de Más."
     />
-    <meta property="og:image" content="images/Luz/optimized/_DSC6378.jpg" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png" />
@@ -35,7 +34,7 @@
 
     <!-- Icons & CSS -->
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css?v=2" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -45,11 +44,33 @@
         "name": "Jorge Bárcena",
         "jobTitle": "Actor e improvisador teatral",
         "sameAs": [
-          "https://www.instagram.com/jorge_barcena3",
+          "https://www.instagram.com/soyjorgebarcena",
           "https://github.com/JorgeBarcena3"
         ]
       }
     </script>
+
+    <!-- CONTROL DE VISTA EN REDES SOCIALES (Open Graph para WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:username" content="soyjorgebarcena">
+    <meta property="og:title" content="Jorge Bárcena | Actor e Improvisador Teatral">
+    <meta property="og:site_name" content="Jorge Bárcena | Actor e Improvisador Teatral">
+    <meta property="og:description" content="Web oficial, videobook, trayectoria y espectáculos actuales del actor Jorge Bárcena.">
+    <meta property="og:url" content="https://jorgebarcena.es/">
+    <!-- Importante: Pon la ruta real de tu foto principal de actor aquí abajo -->
+    <meta property="og:image" content="https://jorgebarcena.es/images/banner_media.jpg">
+    <meta property="og:image:secure_url" content="https://jorgebarcena.es/images/banner_media.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- TARJETAS DE TWITTER (Twitter Cards) -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- Muestra una tarjeta con la foto grande -->
+    <meta name="twitter:title" content="Jorge Bárcena | Actor e Improvisador Teatral">
+    <meta name="twitter:description" content="Web oficial, videobook y proyectos del actor Jorge Bárcena.">
+    <!-- Aquí la misma foto que pusiste en el Open Graph -->
+    <meta name="twitter:image" content="https://jorgebarcena.es/images/banner_media.jpg">
+
   </head>
 
   <body>
@@ -69,7 +90,7 @@
         <ul class="nav-icons">
           <li>
             <a
-              href="https://www.instagram.com/jorge_barcena3"
+              href="https://www.instagram.com/soyjorgebarcena"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -110,7 +131,7 @@
       <ul class="nav-icons">
         <li>
           <a
-            href="https://www.instagram.com/jorge_barcena3"
+            href="https://www.instagram.com/soyjorgebarcena"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -129,7 +150,7 @@
 
     <!-- ======================== HERO ======================== -->
     <section id="hero" aria-label="Presentación">
-      <p class="hero-eyebrow fade-up" style="color: rgba(255, 255, 255, 0.85); border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem;">Actor · Improvisador</p>
+      <p class="hero-eyebrow fade-up" style="color: #ffffff; border-bottom: 1px solid var(--accent); padding-bottom: 0.5rem;">Actor · Improvisador</p>
       <h1 class="hero-name fade-up" style="color: var(--white); text-shadow: 0 4px 12px rgba(0,0,0,0.3);">Jorge<br />Bárcena</h1>
       <p class="hero-subtitle fade-up" style="color: rgba(255, 255, 255, 0.85);">Jugar · Teatro · Improvisación</p>
       <a href="#bio" class="hero-scroll fade-up" aria-label="Ir a la biografía" style="color: var(--white);">
@@ -173,8 +194,13 @@
               complementándola con
               <strong>formación en interpretación ante cámara</strong> con
               <strong>Jesús Granda</strong>. Soy fundador de la compañía
-              <strong>Silla de Más</strong> y colaboro regularmente con diversas
+              <strong>Silla de Más <a href="https://sillademas.com" style="color: var(--accent);" target="_blank" rel="noopener noreferrer">(web)</a></strong> y colaboro regularmente con diversas
               compañías de la <strong>escena madrileña y española</strong>.
+            </p>
+            <p>
+              Además de mi faceta como actor, imparto el
+              <strong>Curso Anual de Iniciación a la Improvisación Teatral</strong>,
+              donde enseño las técnicas y herramientas clave de la impro, la escucha activa y la creación colectiva.
             </p>
             <p>
               Como buen <strong>improvisador</strong>, afronto cada proyecto desde el
@@ -183,9 +209,12 @@
               <strong>constante aprendizaje</strong>.
             </p>
             
-            <div style="margin-top: 2.5rem; text-align: center;">
+            <div style="margin-top: 2.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
               <a href="files/Jorge Bárcena - CV Actor.pdf" download class="form-submit" style="text-decoration: none; display: inline-block;">
                 Descargar CV
+              </a>
+              <a href="files/Jorge Bárcena - Dosier Curso Improvisación Teatral.pdf" download class="form-submit" style="text-decoration: none; display: inline-block;">
+                Curso Regular
               </a>
             </div>
           </div>
@@ -267,14 +296,6 @@
             </div>
             <div class="gallery-item">
               <img
-                src="images/Web_Galeria/4.png"
-                alt="Dummy 4"
-                loading="lazy"
-              />
-              <div class="gallery-caption">Comedia</div>
-            </div>
-            <div class="gallery-item">
-              <img
                 src="images/Web_Galeria/5.png"
                 alt="Dummy 5"
                 loading="lazy"
@@ -283,15 +304,39 @@
             </div>
             <div class="gallery-item">
               <img
-                src="images/Web_Galeria/6.png"
-                alt="Dummy 6"
+                src="images/Web_Galeria/11.png"
+                alt="Dummy 7"
                 loading="lazy"
               />
-              <div class="gallery-caption">Macbeth</div>
+              <div class="gallery-caption">Elegante</div>
             </div>
             <div class="gallery-item">
               <img
                 src="images/Web_Galeria/7.png"
+                alt="Dummy 7"
+                loading="lazy"
+              />
+              <div class="gallery-caption">Blanco y negro</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/Web_Galeria/12.png"
+                alt="Dummy 7"
+                loading="lazy"
+              />
+              <div class="gallery-caption">Artística</div>
+            </div>
+                 <div class="gallery-item">
+              <img
+                src="images/Web_Galeria/4.png"
+                alt="Dummy 4"
+                loading="lazy"
+              />
+              <div class="gallery-caption">Comedia</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/Web_Galeria/13.png"
                 alt="Dummy 7"
                 loading="lazy"
               />
@@ -312,6 +357,14 @@
                 loading="lazy"
               />
               <div class="gallery-caption">La tienda de los horrores</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/Web_Galeria/6.png"
+                alt="Dummy 6"
+                loading="lazy"
+              />
+              <div class="gallery-caption">Macbeth</div>
             </div>
             <div class="gallery-item">
               <img
@@ -371,23 +424,6 @@
            <iframe
         width="100%"
         height="220"
-        src="https://www.youtube.com/embed/ksxjYMZw7Yc"
-        title="Escena Romántica"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        style="display: block; border-bottom: 1px solid var(--light-gray);">
-      </iframe>
-            <div style="padding: 1.25rem;">
-              <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--black); margin-bottom: 0.25rem;">Escena Dramática</h4>
-              <p style="font-size: 0.85rem; color: var(--gray);">Actriz: Aurora Barrero</p>
-            </div>
-          </div>
-          <!-- Scene 1 -->
-          <div class="scene-card" style="background: var(--off-white); border-radius: 8px; overflow: hidden; border: 1px solid var(--light-gray); transition: transform var(--ease), box-shadow var(--ease);">
-           <iframe
-        width="100%"
-        height="220"
         src="https://www.youtube.com/embed/On8VDRVSaQQ"
         title="Escena The Boys"
         frameborder="0"
@@ -398,6 +434,23 @@
             <div style="padding: 1.25rem;">
               <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--black); margin-bottom: 0.25rem;">Escena The Boys</h4>
               <p style="font-size: 0.85rem; color: var(--gray);">Actriz: Carol Montoro</p>
+            </div>
+          </div>
+
+          <div class="scene-card" style="background: var(--off-white); border-radius: 8px; overflow: hidden; border: 1px solid var(--light-gray); transition: transform var(--ease), box-shadow var(--ease);">
+           <iframe
+        width="100%"
+        height="220"
+        src="https://www.youtube.com/embed/ksxjYMZw7Yc"
+        title="Escena Romántica"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        style="display: block; border-bottom: 1px solid var(--light-gray);">
+      </iframe>
+            <div style="padding: 1.25rem;">
+              <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--black); margin-bottom: 0.25rem;">Escena Dramática</h4>
+              <p style="font-size: 0.85rem; color: var(--gray);">Actriz: Aurora Barrero</p>
             </div>
           </div>
           
@@ -432,7 +485,7 @@
         style="display: block; border-bottom: 1px solid var(--light-gray);">
       </iframe>
             <div style="padding: 1.25rem;">
-              <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--black); margin-bottom: 0.25rem;">Monólogo</h4>
+              <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--black); margin-bottom: 0.25rem;">Escena naturalista</h4>
               <p style="font-size: 0.85rem; color: var(--gray);">Escena entre hermanos.</p>
             </div>
           </div>
@@ -466,7 +519,7 @@
               <ul class="social-links">
                 <li>
                   <a
-                    href="https://www.instagram.com/jorge_barcena3"
+                    href="https://www.instagram.com/soyjorgebarcena"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"

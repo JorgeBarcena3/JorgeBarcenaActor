@@ -10,7 +10,7 @@
   --dark: #1A1A1A;
   --gray: #777777;
   --light-gray: #E5E5E4;
-  --accent: #043ea2;
+  --accent: #ff9100;
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -328,7 +328,7 @@ button {
 
 .hero-scroll {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 10vh;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -789,7 +789,7 @@ button {
   text-transform: uppercase;
   font-weight: 500;
   color: var(--white);
-  background: #008dd6;
+  background: var(--accent);
   border: 1px solid var(--white);
   padding: 0.85rem 2.5rem;
   cursor: pointer;
@@ -797,9 +797,9 @@ button {
 }
 
 .form-submit:hover:not(:disabled) {
-  border-color: #008dd6;
+  border-color: var(--accent);
   background: transparent;
-  color: #008dd6;
+  color: var(--accent);
 }
 
 .form-submit:disabled {
