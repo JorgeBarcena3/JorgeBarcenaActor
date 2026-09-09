@@ -1,0 +1,11 @@
+services:
+  jorgebarcena-actor:
+    build:
+      context: .
+    container_name: jorgebarcena_actor
+    restart: always
+    ports:
+      - "6666:6666"
+    environment:
+      - PORT=6666
+      - NODE_ENV=production
