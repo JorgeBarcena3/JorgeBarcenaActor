@@ -308,6 +308,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cookiePrefMedia) {
       cookiePrefMedia.checked = consent ? Boolean(consent.media) : false;
     }
+    cookieModal.style.display = 'flex';
+    void cookieModal.offsetHeight;
     cookieModal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
   };
@@ -315,11 +317,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeCookieModal = () => {
     if (!cookieModal) return;
     cookieModal.classList.add('hidden');
+    setTimeout(() => {
+      if (cookieModal.classList.contains('hidden')) {
+        cookieModal.style.display = 'none';
+      }
+    }, 300);
     document.body.style.overflow = '';
   };
 
   const hideCookieBanner = () => {
-    if (cookieBanner) cookieBanner.classList.add('hidden');
+    if (cookieBanner) {
+      cookieBanner.classList.add('hidden');
+      setTimeout(() => {
+        if (cookieBanner.classList.contains('hidden')) {
+          cookieBanner.style.display = 'none';
+        }
+      }, 350);
+    }
   };
 
   // Comprobar consentimiento previo al cargar la página
@@ -327,6 +341,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!currentConsent && cookieBanner) {
     // Retardo sutil para mostrar el banner suavemente
     setTimeout(() => {
+      cookieBanner.style.display = 'block';
+      void cookieBanner.offsetHeight;
       cookieBanner.classList.remove('hidden');
     }, 500);
   }

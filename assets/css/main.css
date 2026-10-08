@@ -944,14 +944,22 @@ footer {
 }
 
 .footer-links {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 0;
-  margin: 0;
+  list-style: none !important;
+  list-style-type: none !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.footer-links li {
+  list-style: none !important;
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .footer-links a {
@@ -1212,6 +1220,7 @@ footer {
 }
 
 .cookie-banner.hidden {
+  display: none !important;
   transform: translateY(120%);
   opacity: 0;
   pointer-events: none;
@@ -1304,6 +1313,7 @@ footer {
 }
 
 .cookie-modal-overlay.hidden {
+  display: none !important;
   opacity: 0;
   pointer-events: none;
 }
