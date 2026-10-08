@@ -89,7 +89,8 @@ button {
   transition: background var(--ease), box-shadow var(--ease);
 }
 
-#nav.scrolled {
+#nav.scrolled,
+#nav.nav-solid {
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -927,16 +928,533 @@ button {
    FOOTER
    ======================== */
 footer {
-  padding: 2rem clamp(1.25rem, 4vw, 2.5rem);
+  padding: 3rem clamp(1.25rem, 4vw, 2.5rem);
   border-top: 1px solid var(--light-gray);
   text-align: center;
+  background: var(--white);
 }
 
-footer p {
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color var(--ease);
+}
+
+.footer-links a:hover {
+  color: var(--black);
+}
+
+.footer-copy {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--light-gray);
+  color: var(--gray);
+  margin: 0;
+}
+
+.footer-dev-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--ease);
+}
+
+.footer-dev-link:hover {
+  color: var(--accent);
+}
+
+/* ============================================================
+   PÁGINAS LEGALES (Aviso Legal, Privacidad, Cookies)
+   ============================================================ */
+.legal-page {
+  padding-top: calc(var(--nav-height) + 2.5rem);
+  padding-bottom: 5rem;
+  background: var(--white);
+  min-height: 100vh;
+}
+
+.legal-hero {
+  border-bottom: 1px solid var(--light-gray);
+  padding-bottom: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.legal-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.legal-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 6vw, 3.5rem);
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.legal-subtitle {
+  font-size: 1.05rem;
+  color: var(--gray);
+  max-width: 780px;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.legal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.legal-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legal-card {
+  max-width: 860px;
+}
+
+.legal-block {
+  margin-bottom: 3rem;
+}
+
+.legal-block h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.legal-block h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 1.75rem 0 0.75rem 0;
+}
+
+.legal-block p {
+  color: var(--dark);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.legal-block ul, .legal-block ol {
+  margin: 0.75rem 0 1.25rem 1.75rem;
+  color: var(--dark);
+}
+
+.legal-block li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.legal-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: opacity var(--ease);
+}
+
+.legal-link:hover {
+  opacity: 0.8;
+}
+
+/* Tablas legales */
+.legal-table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.legal-table th,
+.legal-table td {
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--light-gray);
+  vertical-align: top;
+}
+
+.legal-table th {
+  background: var(--off-white);
+  color: var(--black);
+  font-weight: 600;
+  width: 28%;
+  white-space: nowrap;
+}
+
+.legal-table tr:last-child th,
+.legal-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Badge NIF/CIF en trámite */
+.badge-pending {
+  display: inline-block;
+  background: rgba(255, 145, 0, 0.12);
+  color: #c96b00;
+  border: 1px solid rgba(255, 145, 0, 0.35);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+
+.legal-note-text {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 0.4rem;
+  line-height: 1.45;
+}
+
+.legal-callout {
+  background: var(--off-white);
+  border-left: 3px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.legal-callout p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--dark);
+}
+
+/* Checkbox privacidad en formulario */
+.form-field-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.5;
+  margin-top: -0.25rem;
+}
+
+.form-field-checkbox input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.15rem;
+  cursor: pointer;
+}
+
+.form-field-checkbox a {
+  color: var(--dark);
+  text-decoration: underline;
+}
+
+/* ============================================================
+   BANNER Y MODAL DE COOKIES
+   ============================================================ */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111111;
+  color: #eeeeee;
+  padding: 1.25rem clamp(1.25rem, 4vw, 2.5rem);
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(0);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.cookie-banner.hidden {
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cookie-banner-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.cookie-banner-text {
+  flex: 1 1 500px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.cookie-banner-text strong {
+  color: var(--white);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.cookie-banner-text a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn-cookie {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  padding: 0.65rem 1.15rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all var(--ease);
+  border: 1px solid transparent;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.btn-cookie--primary {
+  background: var(--accent);
+  color: var(--black);
+  font-weight: 600;
+}
+
+.btn-cookie--primary:hover {
+  background: #ffa726;
+}
+
+.btn-cookie--secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.25);
+  color: var(--white);
+}
+
+.btn-cookie--secondary:hover {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Modal de Cookies */
+.cookie-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.cookie-modal-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cookie-modal-box {
+  background: var(--white);
+  color: var(--dark);
+  max-width: 620px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 4px;
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.cookie-modal-overlay.hidden .cookie-modal-box {
+  transform: translateY(20px);
+}
+
+.cookie-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.cookie-modal-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--black);
+  margin: 0;
+}
+
+.cookie-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--gray);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem;
+}
+
+.cookie-modal-close:hover {
+  color: var(--black);
+}
+
+.cookie-modal-intro {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.cookie-pref-card {
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  padding: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.cookie-pref-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cookie-pref-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--black);
+}
+
+.cookie-pref-badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  background: var(--off-white);
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.cookie-pref-badge.active {
+  background: rgba(255, 145, 0, 0.15);
+  color: #c96b00;
+}
+
+.cookie-pref-desc {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Switch toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--accent);
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+.cookie-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--light-gray);
+  flex-wrap: wrap;
 }
 
 /* ========================

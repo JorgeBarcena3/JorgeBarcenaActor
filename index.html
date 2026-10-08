@@ -446,7 +446,7 @@
            <iframe
         width="100%"
         height="220"
-        src="https://www.youtube.com/embed/On8VDRVSaQQ"
+        src="https://www.youtube-nocookie.com/embed/On8VDRVSaQQ"
         title="Escena The Boys"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -463,7 +463,7 @@
            <iframe
         width="100%"
         height="220"
-        src="https://www.youtube.com/embed/ksxjYMZw7Yc"
+        src="https://www.youtube-nocookie.com/embed/ksxjYMZw7Yc"
         title="Escena Romántica"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -481,7 +481,7 @@
 <iframe
         width="100%"
         height="220"
-        src="https://www.youtube.com/embed/J4C3cWlnNv8"
+        src="https://www.youtube-nocookie.com/embed/J4C3cWlnNv8"
         title="Monólogo cómico"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -499,7 +499,7 @@
            <iframe
         width="100%"
         height="220"
-        src="https://www.youtube.com/embed/Cb2g20YaYac"
+        src="https://www.youtube-nocookie.com/embed/Cb2g20YaYac"
         title="Escena dramática"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -613,6 +613,12 @@
                 placeholder="¿En qué puedo ayudarte?"
               ></textarea>
             </div>
+            <div class="form-field-checkbox">
+              <input type="checkbox" id="privacy-policy" name="privacy-policy" required />
+              <label for="privacy-policy">
+                He leído y acepto la <a href="politica-de-privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a>
+              </label>
+            </div>
             <button type="submit" class="form-submit" id="form-submit-btn">
               Enviar Mensaje
             </button>
@@ -638,18 +644,101 @@
     <!-- TOAST -->
     <div class="toast" id="toast-notification" role="alert" aria-live="polite"></div>
 
+    <!-- ======================== COOKIE BANNER ======================== -->
+    <aside class="cookie-banner hidden" id="cookie-banner" role="region" aria-label="Gestión de cookies">
+      <div class="cookie-banner-inner">
+        <div class="cookie-banner-text">
+          <strong>Aviso de Cookies</strong>
+          Este sitio web utiliza cookies técnicas necesarias para su funcionamiento y cookies de terceros (YouTube) para reproducir el videobook y muestras escénicas. Puedes aceptar todas las cookies, rechazar las no esenciales o configurar tus preferencias. Más información en nuestra <a href="politica-de-cookies.html">Política de Cookies</a>.
+        </div>
+        <div class="cookie-banner-actions">
+          <button type="button" class="btn-cookie btn-cookie--primary" id="btn-cookie-accept">
+            Aceptar todas
+          </button>
+          <button type="button" class="btn-cookie btn-cookie--secondary" id="btn-cookie-reject">
+            Solo necesarias
+          </button>
+          <button type="button" class="btn-cookie btn-cookie--secondary" id="btn-cookie-settings">
+            Configurar
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ======================== COOKIE PREFERENCES MODAL ======================== -->
+    <div class="cookie-modal-overlay hidden" id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+      <div class="cookie-modal-box">
+        <div class="cookie-modal-header">
+          <h3 id="cookie-modal-title">Configuración de Cookies</h3>
+          <button type="button" class="cookie-modal-close" id="btn-cookie-modal-close" aria-label="Cerrar modal de cookies">&times;</button>
+        </div>
+        <p class="cookie-modal-intro">
+          Te permitimos elegir qué tipos de cookies deseas activar. Las cookies necesarias siempre están activas para garantizar el funcionamiento básico del sitio. Consulta nuestra <a href="politica-de-cookies.html" class="legal-link">Política de Cookies</a> para más detalles.
+        </p>
+
+        <!-- Necesarias -->
+        <div class="cookie-pref-card">
+          <div class="cookie-pref-top">
+            <span class="cookie-pref-name">Cookies Técnicas (Necesarias)</span>
+            <span class="cookie-pref-badge active">Siempre activas</span>
+          </div>
+          <p class="cookie-pref-desc">
+            Son imprescindibles para el correcto funcionamiento del sitio web, la navegación segura y el almacenamiento de tus preferencias de privacidad. No se pueden desactivar.
+          </p>
+        </div>
+
+        <!-- Multimedia / YouTube -->
+        <div class="cookie-pref-card">
+          <div class="cookie-pref-top">
+            <span class="cookie-pref-name">Multimedia y Vídeos (YouTube)</span>
+            <label class="switch" for="cookie-pref-media">
+              <input type="checkbox" id="cookie-pref-media" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <p class="cookie-pref-desc">
+            Permiten visualizar e interactuar con los reproductores de vídeo de videobooks y escenas teatrales alojados en YouTube mediante el modo de privacidad mejorada. Si las desactivas, los vídeos continuarán disponibles pero con la máxima restricción de cookies de terceros.
+          </p>
+        </div>
+
+        <div class="cookie-modal-actions">
+          <button type="button" class="btn-cookie btn-cookie--secondary" id="btn-cookie-save-reject">
+            Rechazar opcionales
+          </button>
+          <button type="button" class="btn-cookie btn-cookie--primary" id="btn-cookie-save-pref">
+            Guardar preferencias
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- ======================== FOOTER ======================== -->
     <footer>
-      <p>
-        Jorge Bárcena Lumbreras &copy; <span id="year"></span>
-        <span style="margin: 0 0.5rem; opacity: 0.5;">·</span>
-        <a href="https://dev.jorgebarcena.es" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;" title="Web de Software y Consultoría Tecnológica">
-          dev.jorgebarcena.es
-        </a>
-      </p>
+      <div class="footer-inner">
+        <ul class="footer-links">
+          <li><a href="aviso-legal.html">Aviso Legal</a></li>
+          <li><a href="politica-de-privacidad.html">Política de Privacidad</a></li>
+          <li><a href="politica-de-cookies.html">Política de Cookies</a></li>
+          <li><a href="#" id="footer-cookie-settings">Configurar Cookies</a></li>
+          <li>
+            <a
+              href="https://dev.jorgebarcena.es"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-dev-link"
+              title="Web de Software y Consultoría Tecnológica"
+            >
+              dev.jorgebarcena.es
+            </a>
+          </li>
+        </ul>
+        <p class="footer-copy">
+          Jorge Bárcena Lumbreras &copy; <span id="year"></span>
+        </p>
+      </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js?v=2" defer></script>
+    <script src="assets/js/main.js?v=3" defer></script>
   </body>
 </html>

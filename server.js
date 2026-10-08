@@ -250,6 +250,21 @@ app.get('/health', (req, res) => {
 });
 
 // ========================
+// Páginas legales
+// ========================
+app.get('/aviso-legal', (req, res) => {
+  res.sendFile(path.join(__dirname, 'aviso-legal.html'));
+});
+
+app.get(['/privacidad', '/politica-de-privacidad'], (req, res) => {
+  res.sendFile(path.join(__dirname, 'politica-de-privacidad.html'));
+});
+
+app.get(['/cookies', '/politica-de-cookies'], (req, res) => {
+  res.sendFile(path.join(__dirname, 'politica-de-cookies.html'));
+});
+
+// ========================
 // SPA fallback — serve index.html for any unmatched route
 // ========================
 app.use((req, res) => {
