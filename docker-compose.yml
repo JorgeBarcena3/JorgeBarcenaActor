@@ -2,10 +2,27 @@ services:
   jorgebarcena-actor:
     build:
       context: .
-    container_name: jorgebarcena_actor
+    image: www-jorgebarcena-actor:latest
+    container_name: ${CONTAINER_NAME:-jorgebarcena_actor}
     restart: always
     ports:
-      - "127.0.0.1:6666:6666"
+      - "127.0.0.1:${PORT:-6666}:6666"
+    env_file:
+      - .env
     environment:
       - PORT=6666
       - NODE_ENV=production
+    volumes:
+      - ./contacto:/app/contacto
+      - ./.env:/app/.env:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://127.0.0.1:6666/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+networks:
+  default:
+    name: www_default
+    external: true
