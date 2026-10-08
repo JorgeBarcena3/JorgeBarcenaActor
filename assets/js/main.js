@@ -4,7 +4,7 @@
 // Jorge Bárcena — Minimalist Portfolio
 // ============================================================
 
-document.addEventListener('DOMContentLoaded', () => {
+const init = () => {
 
   // ========================
   // COPYRIGHT YEAR
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ========================
   // GESTIÓN DE COOKIES (RGPD / AEPD)
   // ========================
-  const COOKIE_STORAGE_KEY = 'jb_cookie_consent';
+  const COOKIE_STORAGE_KEY = 'jb_cookie_consent_v2';
   const cookieBanner = document.getElementById('cookie-banner');
   const cookieModal = document.getElementById('cookie-modal');
   const btnCookieAccept = document.getElementById('btn-cookie-accept');
@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
         necessary: true,
         media: Boolean(pref.media),
         timestamp: new Date().toISOString(),
-        version: 1,
+        version: 2,
       };
       localStorage.setItem(COOKIE_STORAGE_KEY, JSON.stringify(value));
       return value;
@@ -302,14 +302,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  const showCookieBanner = () => {
+    if (!cookieBanner) return;
+    cookieBanner.style.removeProperty('display');
+    cookieBanner.classList.remove('hidden');
+  };
+
+  const hideCookieBanner = () => {
+    if (!cookieBanner) return;
+    cookieBanner.classList.add('hidden');
+  };
+
   const openCookieModal = () => {
     if (!cookieModal) return;
     const consent = getCookieConsent();
     if (cookiePrefMedia) {
       cookiePrefMedia.checked = consent ? Boolean(consent.media) : false;
     }
-    cookieModal.style.display = 'flex';
-    void cookieModal.offsetHeight;
+    cookieModal.style.removeProperty('display');
     cookieModal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
   };
@@ -317,34 +327,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeCookieModal = () => {
     if (!cookieModal) return;
     cookieModal.classList.add('hidden');
-    setTimeout(() => {
-      if (cookieModal.classList.contains('hidden')) {
-        cookieModal.style.display = 'none';
-      }
-    }, 300);
     document.body.style.overflow = '';
-  };
-
-  const hideCookieBanner = () => {
-    if (cookieBanner) {
-      cookieBanner.classList.add('hidden');
-      setTimeout(() => {
-        if (cookieBanner.classList.contains('hidden')) {
-          cookieBanner.style.display = 'none';
-        }
-      }, 350);
-    }
   };
 
   // Comprobar consentimiento previo al cargar la página
   const currentConsent = getCookieConsent();
   if (!currentConsent && cookieBanner) {
     // Retardo sutil para mostrar el banner suavemente
-    setTimeout(() => {
-      cookieBanner.style.display = 'block';
-      void cookieBanner.offsetHeight;
-      cookieBanner.classList.remove('hidden');
-    }, 500);
+    setTimeout(showCookieBanner, 300);
   }
 
   // Aceptar todas
@@ -514,4 +504,10 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(err => console.error('Error loading trabajos.json:', err));
   }
 
-});
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
